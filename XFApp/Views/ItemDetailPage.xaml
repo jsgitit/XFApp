@@ -4,11 +4,19 @@
              x:Class="XFApp.Views.ItemDetailPage"
              Title="{Binding Title}">
 
-    <StackLayout Spacing="20" Padding="15">
-        <Label Text="Text:" FontSize="Medium" />
-        <Label Text="{Binding Text}" FontSize="Small"/>
-        <Label Text="Description:" FontSize="Medium" />
-        <Label Text="{Binding Description}" FontSize="Small"/>
+    <StackLayout Spacing="20" Padding="15" >
+        <Picker x:Name="NoteCourse" Title="Course" FontSize="Medium">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Course 1</x:String>
+                    <x:String>Course 2</x:String>
+                    <x:String>Course 3</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Entry x:Name="NoteHeading" Placeholder="Note Title" FontSize="Medium"/>
+        
+        <Editor x:Name="NoteText" AutoSize="TextChanges" Placeholder="Note Text" FontSize="Medium" BackgroundColor="Bisque" FontAttributes="Bold" />
     </StackLayout>
     
 </ContentPage>
