@@ -14,7 +14,8 @@ namespace XFApp
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            // MainPage = new AppShell();
+            MainPage = new ItemDetailPage();
         }
 
         protected override void OnStart()
